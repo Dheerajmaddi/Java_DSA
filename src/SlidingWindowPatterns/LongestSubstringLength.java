@@ -13,8 +13,8 @@ public class LongestSubstringLength {
         Set<Character> slidingWindow = new HashSet<>();
         // Using HashSet
         while(right < str.length()){
-            if(slidingWindow.contains(str.charAt(right))){
-                slidingWindow.remove(str.charAt(right));
+            while(slidingWindow.contains(str.charAt(right))){
+                slidingWindow.remove(str.charAt(left));
                 left++;
             }
 
